@@ -1,3 +1,0 @@
-#Primer Commit
-
-print("Welcome!")
