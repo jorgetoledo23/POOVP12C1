@@ -7,15 +7,21 @@
 
 class Cliente:
     #Atributos => Caracteticas en comun de todo los Clientes
-    Rut = None
+    Rut = ""
     Nombre = ""
     Apellido = ""
     Edad = 0
     
+    #Metodo Constructor
+    def __init__(self):
+        pass
 
     #Metodos => Comportamiento en comun de todos los Cliente
     def obtenerNombreCompleto(self):
         return f"Nombre: {self.Nombre}, Apellido: {self.Apellido}"
+
+
+
 
 
 
@@ -32,7 +38,6 @@ class Animal:
     #Metodos
     def EmitirSonido(self):
         pass
-
 
 
 class SmartPhone:
