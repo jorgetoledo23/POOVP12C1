@@ -6,17 +6,33 @@
 
 # Crear 2 personajes y mostrar sus Stats
 
+import os
+os.system("cls")
 class Personaje:
 
     def __init__(self, nombre):
-        pass
+        self.__Nombre = nombre
+        self.__Vida = 100
+        self.__Fuerza = 100
+        self.__Oro = 1000
 
     def getStats(self):
-        pass
+        return f"Nombre: {self.__Nombre}\nVida: {self.__Vida}\nFuerza: {self.__Fuerza}\nOro: {self.__Oro}\n"
 
-Player1 = Personaje("Player 1")
-Player2 = Personaje("Player 2")
+    def getVida(self):
+        return self.__Vida
+
+    def setVida(self, nuevaVida:int):
+        self.__Vida = nuevaVida
 
 
-print(Player1.getStats())
-print(Player2.getStats())
+    def Atacar(self, Objetivo):
+        poderGolpe = self.__Fuerza / 15 + 10
+        nuevaVida = Objetivo.getVida() - poderGolpe
+        Objetivo.setVida(nuevaVida)
+
+
+
+
+
+
