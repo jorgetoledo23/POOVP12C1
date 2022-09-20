@@ -33,10 +33,11 @@ while True:
         for item in Tienda.Tienda:
             print(f"[{indice}] - {item.getStats()}")
             indice += 1
-        seleccion = input("\nQue Item quieres comprar?: ")
-        
-
-
+        seleccion = int(input("\nQue Item quieres comprar?: "))
+        if turno == 1:
+            Player1.Comprar(Tienda.Tienda[seleccion - 1])
+        else: Player2.Comprar(Tienda.Tienda[seleccion - 1])
+        print("Item Comprado!")
 
     print("Turno terminado. Presiona Enter para Continuar!")
 
