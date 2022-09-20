@@ -1,6 +1,7 @@
 #Sistema de dos Turnos!
 import os
 from Model.Personaje import *
+import Tienda
 
 turno = 1
 Player1 = Personaje("Player 1")
@@ -25,6 +26,17 @@ while True:
             Player1.Atacar(Player2)
         else: 
             Player2.Atacar(Player1)
+    
+    if opcion == "2":
+        os.system("cls")
+        indice = 1
+        for item in Tienda.Tienda:
+            print(f"[{indice}] - {item.getStats()}")
+            indice += 1
+        seleccion = input("\nQue Item quieres comprar?: ")
+        
+
+
 
     print("Turno terminado. Presiona Enter para Continuar!")
 

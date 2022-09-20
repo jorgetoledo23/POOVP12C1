@@ -8,3 +8,10 @@ class Item:
 
     def getStats(self):
         return f"Coste: [{self.__Coste}] Nombre: [{self.__Nombre}] Vida: [{self.__Vida}] Fuerza: [{self.__Fuerza}]"
+    
+    def getCoste(self):
+        return self.__Coste
+    def getVida(self):
+        return self.__Vida
+    def getFuerza(self):
+        return self.__Fuerza
