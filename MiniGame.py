@@ -14,7 +14,10 @@ while True:
     print(Player2.getStats())
 
     print(f"Turno Actual Jugador: {turno} \n")
+
     print("[1] - Atacar \n")
+    print("[2] - Comprar Item \n")
+
     opcion = input("Selecciona tu Jugada: ")
 
     if opcion == "1":
