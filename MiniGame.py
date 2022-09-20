@@ -13,8 +13,8 @@ while True:
     print(Player1.getStats())
     print(Player2.getStats())
 
-    print(f"Turno Actual Jugador: {turno}")
-    print("[1] - Atacar")
+    print(f"Turno Actual Jugador: {turno} \n")
+    print("[1] - Atacar \n")
     opcion = input("Selecciona tu Jugada: ")
 
     if opcion == "1":
