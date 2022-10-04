@@ -32,13 +32,30 @@ class Personaje:
         Objetivo.setVida(nuevaVida)
 
     def Comprar(self, Item):
-        self.__Oro -= Item.getCoste()
-        self.__Vida += Item.getVida()
-        self.__Fuerza += Item.getFuerza()
-        self.__Inventario.append(Item)
+        if self.__Oro >= Item.getCoste():
+            self.__Oro -= Item.getCoste()
+            self.__Vida += Item.getVida()
+            self.__Fuerza += Item.getFuerza()
+            self.__Inventario.append(Item)
+            print("Item Comprado!")
+        else: print("Oro Insuficiente!")
+    
+    def Vender(self, Item):
+        self.__Oro += int(Item.getCoste() * 0.5)
+        self.__Vida -= Item.getVida()
+        self.__Fuerza -= Item.getFuerza()
+        self.__Inventario.remove(Item)
+        print("Item Vendido!")
 
+    def getInventario(self):
+        inv = ""
+        for item in self.__Inventario:
+            inv += item.getNombre() + " - "
+        return inv
 
-
+        
+    def getListaInventario(self):
+        return self.__Inventario
 
 
 

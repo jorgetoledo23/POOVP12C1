@@ -2,7 +2,7 @@ from Model.Item import Item
 
 Tienda = []
 
-Item1 = Item("Espada", 0, 120, 300)
+Item1 = Item("Espada", 0, 120, 1300)
 Item2 = Item("Escudo", 200, 0, 300)
 Item3 = Item("Pocion de Vida", 80, 0, 100)
 Item4 = Item("Pocion de Fuerza", 0, 80, 100)
