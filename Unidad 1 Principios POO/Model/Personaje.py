@@ -31,6 +31,7 @@ class Personaje:
         nuevaVida = Objetivo.getVida() - poderGolpe
         Objetivo.setVida(nuevaVida)
 
+
     def Comprar(self, Item):
         if self.__Oro >= Item.getCoste():
             self.__Oro -= Item.getCoste()
