@@ -5,10 +5,10 @@ class DAO:
     def __init__(self):
         try:
             self.cnx = mysql.connector.connect(
-                user='sql10549760', 
-                password='n4AtcPLJrd',
-                host='sql10.freemysqlhosting.net',
-                database='sql10549760')
+                user='root', 
+                password='',
+                host='localhost',
+                database='DBPOOIEIV')
             print("Coneccion Establecida")
         except mysql.connector.Error as err:
             if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
@@ -28,7 +28,7 @@ class DAO:
         cursor.execute(addItem, dataItem)
         self.cnx.commit()
         cursor.close()
-        #self.cnx.close()
+
 
     def LeerItems(self):
         cursor = self.cnx.cursor()
